@@ -210,7 +210,7 @@ msg "
 
 Home Assistant is reachable by going to the following URLs.
 
-      http://${IP}:8123
-      http://${HOSTNAME}.local:8123
+#      http://${IP}:8123
+#      http://${HOSTNAME}.local:8123
 
 "
