@@ -202,7 +202,7 @@ lxc-cmd rm -rf /var/{cache,log}/* /var/lib/apt/lists/*
 ### Finish LXC commands ###
 
 # Get network details
-IP=$(pct exec $CTID ip a s dev eno1 | sed -n '/inet / s/\// /p' | awk '{print $2}')
+#IP=$(pct exec $CTID ip a s dev eno1 | sed -n '/inet / s/\// /p' | awk '{print $2}')
 
 # Show completion message
 info "Successfully created Home Assistant LXC to $CTID."
