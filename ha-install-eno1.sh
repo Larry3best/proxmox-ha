@@ -139,7 +139,7 @@ lxc-cmd sed -i 's/type\:veth/interface-name\:veth\*/' $NETWORKMANAGER_CONFIG_PAT
 NETWORKMANAGER_PROFILE_PATH='/etc/NetworkManager/system-connections/default'
 lxc-cmd wget -qLO $NETWORKMANAGER_PROFILE_PATH ${HA_URL_BASE}/NetworkManager/system-connections/default
 lxc-cmd chmod 600 $NETWORKMANAGER_PROFILE_PATH
-NETWORKMANAGER_CONNECTION=$(lxc-cmd nmcli connection | grep eth0 | awk -F "  " '{print $1}')
+NETWORKMANAGER_CONNECTION=$(lxc-cmd nmcli connection | grep eno0 | awk -F "  " '{print $1}')
 lxc-cmd nmcli connection down "$NETWORKMANAGER_CONNECTION" > /dev/null
 lxc-cmd nmcli connection delete "$NETWORKMANAGER_CONNECTION" > /dev/null
 lxc-cmd dhclient -r &> /dev/null
